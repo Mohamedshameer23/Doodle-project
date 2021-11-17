@@ -1,0 +1,144 @@
+<div class="section">
+  <div class="head">
+    <div class="title">Product</div>
+    <div class="add-product" (click)="popup()">Add Product</div>
+  </div>
+  <div class="space-25"></div>
+  <!-- part-2 -->
+  <div class="navbar">
+    <div class="color-silver">CATEGORIES</div>
+    <select name="" id="cars">
+      <option value="Default sorting">Default sorting</option>
+      <option value="Price High to Low">Price High to Low</option>
+      <option value="Price Low to High">Price Low to High</option>
+    </select>
+  </div>
+  <div class="space-25"></div>
+  <!-- eft -->
+
+  <div class="flex">
+    <div class="left-side">
+      <div class="categories">
+        <div class="sub-cat">shirt</div>
+        <div class="sub-cat">Hoodie/ T-Shirt</div>
+        <div class="sub-cat">Bags</div>
+        <div class="sub-cat">Jeans</div>
+      </div>
+
+      <div class="filter-price">
+        <h3 class="color-silver">FITER BY PRICE</h3>
+        <input type="range" id="vol" name="vol" min="0" max="50" />
+
+        <div class="filter-content">
+          <div class="filter-button">Filter</div>
+          <div class="value flex fcenter">Price $29 - $599</div>
+        </div>
+      </div>
+
+      <div class="top-product">
+        <h3 class="color-silver">TOP PRODUCT</h3>
+        <div class="flex product">
+          <div class="image">
+            <img src="assets/images/yellow.jpg" alt="" />
+          </div>
+          <div class="side-product">
+            <div class="product-name">T-Shirt yellow</div>
+            <div class="star-img">
+              <img src="assets/images/5star.jpg" alt="" />
+            </div>
+            <div class="price">$129.00</div>
+          </div>
+        </div>
+
+        <div class="flex product">
+          <div class="image">
+            <img src="assets/images/skybag - Copy.jpg" alt="" />
+          </div>
+          <div class="side-product">
+            <div class="product-name">Back bag</div>
+            <div class="star-img">
+              <img src="assets/images/5star.jpg" alt="" />
+            </div>
+            <div class="price">$109.00</div>
+          </div>
+        </div>
+
+        <div class="flex product">
+          <div class="image">
+            <img src="assets/images/jeans-1.jpg" alt="" />
+          </div>
+          <div class="side-product">
+            <div class="product-name">Back bag</div>
+            <div class="star-img">
+              <img src="assets/images/5star.jpg" alt="" />
+            </div>
+            <div class="price">$140.00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="right-side">
+      <div class="sell-product">
+        <div class="card" *ngFor="let item of this.sell_product; let i = index">
+          <div class="image">
+            <img src="{{ item.image }}" alt="" />
+          </div>
+          <div class="content">
+            <div class="text" [innerHtml]="item.text"></div>
+            <div class="price" [innerHtml]="item.price"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="space-25"></div>
+  <!-- footer -->
+  <div class="page-navigation">
+    <div class="number">1</div>
+    <div class="number">2</div>
+    <div class="number">3</div>
+  </div>
+  <div class="space-25"></div>
+</div>
+
+<div class="popup-bg" *ngIf="des == true">
+  <div class="close-panel" (click)="popup()">
+    <div class="close">x</div>
+  </div>
+  <div class="popup">
+    <div class="heading">Add Product</div>
+    <div class="title-1">Product category</div>
+    <select name="" id="cars" class="input">
+      <option value="Default sorting">Default sorting</option>
+      <option value="Price High to Low">Price High to Low</option>
+      <option value="Price Low to High">Price Low to High</option>
+    </select>
+    <div class="title-1">Product Title</div>
+    <input type="text" id="fname" name="fname" class="input" /><br /><br />
+    <div class="title-1">Price</div>
+    <input type="text" id="price" name="price" class="input" /><br /><br />
+    <div class="title-1 text-center">Top Product</div>
+    <div class="space-15"></div>
+    <div class="title-1">Upload Product image</div>
+    <div class="upload-btn-wrapper">
+      <button class="btn">Upload</button>
+      <input type="file" name="myfile" />
+    </div>
+    <div class="line"></div>
+    <div class="button-bottom">
+      <button class="btn-c">cancel</button>
+      <button class="btn-s">save</button>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="popup">
+    <div class="close-panel">
+      <div class="close"></div>
+    </div>
+    <div>
+      <video autoplay controls src="assets/videos/Video Lideres.mp4"></video>
+    </div>
+  </div> -->

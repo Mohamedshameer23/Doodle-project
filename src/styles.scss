@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  scroll-behavior: smooth;
+  font-family: "HelveticaNeueLT", Helvetica, Arial, sans-serif;
+}
+
+.section {
+  width: 1320px;
+  max-width: calc(100% - 100px);
+  margin: 0 auto;
+  padding: 30px 0;
+  z-index: 3;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+.fcenter {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.space-25 {
+  height: 25px;
+}
+
+.text-center {
+  text-align: center;
+}

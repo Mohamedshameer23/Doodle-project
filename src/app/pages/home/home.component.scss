@@ -1,0 +1,252 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.color-silver {
+  color: #c2c6cb;
+  font-size: 22px;
+  font-weight: bold;
+}
+.left-side {
+  width: calc(100% - 75%);
+}
+.title {
+  font-size: 27px;
+  font-weight: bold;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.categories {
+  background-color: #f7f8fa;
+  max-width: 250px;
+  padding: 15px;
+  margin-bottom: 20px;
+  .sub-cat {
+    border-bottom: 1px solid #c2c6cb;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    &:nth-child(4) {
+      border-bottom: none;
+    }
+  }
+}
+
+.product {
+  max-height: 90px;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c2c6cb;
+  max-width: 280px;
+  cursor: pointer;
+  .image {
+    max-width: 80px;
+    max-height: 86px;
+  }
+  &:nth-child(4) {
+    border-bottom: none;
+  }
+  .side-product {
+    margin: auto 0;
+  }
+  .product-name {
+    color: #21218fb8;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+.filter-content {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+}
+.filter-button {
+  background-color: #f87255;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+// right
+
+.add-product {
+  background-color: #f87255;
+  width: 150px;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.right-side {
+  width: calc(100% - 25%);
+  .sell-product {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 40px;
+  }
+  .card {
+    width: 300px;
+    height: 288px;
+    box-shadow: 0 0 10px hsl(0deg 0% 68% / 40%);
+  }
+  .content {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f8fa;
+  }
+  .text {
+    font-size: 30px;
+    color: #21218fb8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .price {
+    text-align: center;
+  }
+  .image {
+    text-align: center;
+    padding: 5px;
+  }
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  .number {
+    background-color: #f87255;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.popup-bg {
+  background-color: white;
+  box-shadow: 0 0 10px hsl(0deg 0% 68% / 40%);
+  position: fixed;
+  left: 500px;
+  right: 500px;
+  bottom: 60px;
+  top: 100px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  z-index: 99;
+
+  .popup {
+    margin: 50px;
+  }
+  .heading {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .title-1 {
+    font-size: 35px;
+  }
+  .input {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+.close {
+  background-color: red;
+  width: 25px;
+  height: 25px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+}
+.space-15 {
+  height: 15px;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid #f87255;
+  color: #f87255;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.line {
+  width: 600px;
+  height: 2px;
+  background-color: #c2c6cb;
+  margin: 10px 0;
+}
+
+.button-bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-s {
+  color: white;
+  background-color: #f87255;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+}
+.btn-c {
+  color: black;
+  background-color: #c2c6cb;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  .sell-product {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
